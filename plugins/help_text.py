@@ -68,12 +68,17 @@ async def start(bot, update):
         ]
        )
      )
-@pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
+@pyrogram.Client.on_message(pyrogram.Filters.command(["others_bots"]))
 async def start(bot, update)
     # logger.info(update)
-  TRChatBase(update.from_user.id, update.text, "/start")
+  TRChatBase(update.from_user.id, update.text, "/other_bots")
   await bot.send_message(
-    
+     chat_id=update.chat.id
+      text=Translation.START_TEXT.format(update.from_user.first_name, Config.USER_NAME), 
+      parse_mode="html",
+      #reply_to_message_id=update.message_id
+      reply_markup=InlineKeyboardMarkup(
+        
 @pyrogram.Client.on_message(pyrogram.Filters.command(["upgrade"]))
 async def upgrade(bot, update):
     # logger.info(update)
