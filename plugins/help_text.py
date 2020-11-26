@@ -95,7 +95,7 @@ async def update_channel(bot, update):
      )
    )
 
-      reply_markup=InlineKeyboardMarkup(
+
 @pyrogram.Client.on_message(pyrogram.Filters.command(["upgrade"]))
 async def upgrade(bot, update):
     # logger.info(update)
