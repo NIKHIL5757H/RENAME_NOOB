@@ -69,14 +69,10 @@ async def start(bot, update):
        )
      )
 @pyrogram.Client.on_message(pyrogram.Filters.command(["others_bots"]))
-async def start(bot, update)
-    # logger.info(update)
-  TRChatBase(update.from_user.id, update.text, "/other_bots")
-  await bot.send_message(
+async def other_bots(bot, update)
+    await bot.send_message(
      chat_id=update.chat.id
-      text=Translation.START_TEXT.format(update.from_user.first_name, Config.USER_NAME), 
-      parse_mode="html",
-      #reply_to_message_id=update.message_id
+      text="CLICK BELOW BUTTON AND JOIN BOTS CHANNEL",
       reply_markup=InlineKeyboardMarkup(
       [
         [
