@@ -69,9 +69,9 @@ async def start(bot, update):
        )
      )
 @pyrogram.Client.on_message(pyrogram.Filters.command(["others_bots"]))
-async def other_bots(bot, update)
+async def other_bots(bot, update):
     await bot.send_message(
-     chat_id=update.chat.id
+     chat_id=update.chat.id,
       text="CLICK BELOW BUTTON AND JOIN BOTS CHANNEL",
       reply_markup=InlineKeyboardMarkup(
       [
