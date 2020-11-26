@@ -68,7 +68,7 @@ async def start(bot, update):
         ]
        )
      )
-@pyrogram.Client.on_message(pyrogram.Filters.command(["others_bots"]))
+@pyrogram.Client.on_message(pyrogram.Filters.command(["other_bots"]))
 async def other_bots(bot, update):
     await bot.send_message(
      chat_id=update.chat.id,
