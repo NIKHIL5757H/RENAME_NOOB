@@ -81,7 +81,21 @@ async def other_bots(bot, update):
       ]
      )
    )
-        
+ @pyrogram.Client.on_message(pyrogram.Filters.command(["channel"]))
+async def channel(bot, update):
+    await bot.send_message(
+     chat_id=update.chat.id,
+      text="CLICK BELOW BUTTON AND JOIN UPDATES CHANNEL",
+      reply_markup=InlineKeyboardMarkup(
+      [
+        [
+          InlineKeyboardButton('CHANNEL', url='http://t.me/Noob_botz')
+        ]
+      ]
+     )
+   )
+
+      reply_markup=InlineKeyboardMarkup(
 @pyrogram.Client.on_message(pyrogram.Filters.command(["upgrade"]))
 async def upgrade(bot, update):
     # logger.info(update)
