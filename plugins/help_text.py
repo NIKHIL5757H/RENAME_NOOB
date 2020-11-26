@@ -78,6 +78,13 @@ async def start(bot, update)
       parse_mode="html",
       #reply_to_message_id=update.message_id
       reply_markup=InlineKeyboardMarkup(
+      [
+        [
+         InlineKeyboardButton('OTHER BOTS', url='http://t.me/Noob_botz')
+        ]
+      ]
+     )
+   )
         
 @pyrogram.Client.on_message(pyrogram.Filters.command(["upgrade"]))
 async def upgrade(bot, update):
